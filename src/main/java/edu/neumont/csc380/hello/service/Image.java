@@ -1,5 +1,7 @@
 package edu.neumont.csc380.hello.service;
 
+import javax.persistence.Entity;
+
 @Entity
 public class Image {
 	
