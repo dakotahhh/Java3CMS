@@ -2,32 +2,31 @@ package edu.neumont.csc380.hello.service;
 
 import java.util.List;
 
-public class ImageServiceImpl implements ImageService{
+public class VideoServiceImpl implements VideoService{
 
-	
-	public void addImage(Image image)
-	{
-		
-	}
-
-	public void updateImage(Image image) {
+	public void addVideo(Video video) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	public Image getImage(int id) {
+	public void updateVideo(Video video) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public Video getVideo(int id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public void deleteImage(int id) {
+	public void deleteVideo(int id) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	public List<Image> getImages() {
+	public List<Video> getVideos() {
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
+
 }

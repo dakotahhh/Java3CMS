@@ -7,7 +7,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
-@Path("/index")
+@Path("/image")
 public interface ImageService {
 	@GET
 	@Path("/{name}")
