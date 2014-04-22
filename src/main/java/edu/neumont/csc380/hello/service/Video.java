@@ -1,10 +1,7 @@
 package edu.neumont.csc380.hello.service;
 
-@Entity
 public class Video {
 
-	@Id
-	@GeneratedValue
 	private int id;
 	
 	private String fileName;

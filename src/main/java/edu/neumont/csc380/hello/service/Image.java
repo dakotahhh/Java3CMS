@@ -1,12 +1,24 @@
 package edu.neumont.csc380.hello.service;
 
-import javax.persistence.Entity;
 
-@Entity
+import java.util.List;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+
+//import org.json.simple.JSONObject;
+//JSONObject obj = new JSONObject();
+//obj.put("id", new Integer(1234));
+//obj.put("fileName", "foo");
+//obj.put("width", Integer(1));
+//obj.put("height", Integer(2));
+//obj.put("filesize", Integer(123213));
+
+
 public class Image {
-	
-	@Id
-	@GeneratedValue
+
 	private int id;
 	
 	private String fileName;

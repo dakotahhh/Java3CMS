@@ -11,7 +11,7 @@ public class ImageServiceImpl implements ImageService{
 	}
 
 	public void updateImage(Image image) {
-		// TODO Auto-generated method stub
+		entityManager.merge(image);
 		
 	}
 
@@ -21,7 +21,8 @@ public class ImageServiceImpl implements ImageService{
 	}
 
 	public void deleteImage(int id) {
-		// TODO Auto-generated method stub
+		Image image = entityManager.find(Podcast.class, id);
+		entityManager.remove(image);
 		
 	}
 
