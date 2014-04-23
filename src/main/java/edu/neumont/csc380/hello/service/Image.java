@@ -12,7 +12,7 @@ public class Image {
 //	obj.put("height", Integer(2));
 //	obj.put("filesize", Integer(123213));
 
-	private int id;
+	private Long id;
 	
 	private String fileName;
 	private int width;
@@ -20,12 +20,12 @@ public class Image {
 	private int fileSize;
 	
 	
-	public int getId()
+	public Long getId()
 	{
 		return id;
 	}
 	
-	public void setId(int id)
+	public void setId(Long id)
 	{
 		this.id = id;
 	}
