@@ -1,12 +1,11 @@
 package edu.neumont.csc380.hello.service;
 
-import org.json.simple.JSONObject;
+import javax.xml.bind.annotation.XmlRootElement;
 
-
-
+@XmlRootElement(name = "image")
 public class Image {
 	
-	JSONObject obj = new JSONObject();
+//	JSONObject obj = new JSONObject();
 //	obj.put("id", new Integer(1234));
 //	obj.put("fileName", "foo");
 //	obj.put("width", Integer(1));

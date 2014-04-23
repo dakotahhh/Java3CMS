@@ -1,5 +1,8 @@
 package edu.neumont.csc380.hello.service;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "video")
 public class Video {
 
 	private int id;
