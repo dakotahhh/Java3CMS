@@ -12,24 +12,22 @@ import javax.ws.rs.core.Response;
 
 
 @Path("/images")
-@Consumes("application/json")
-@Produces("application/json")
 public interface ImageService {
 
 	@GET
 	@Path("/{id")
-	@Produces("image/jpg")
+	@Produces({"image/jpg", "image/png"})
 	Response getImage(@PathParam("id") int id);
 	
 	@PUT
 	@Path("/{id}")
-	@Consumes("")
-	@Produces("")
+	@Consumes({"image/jpg", "image/png"})
+	@Produces("application/json")
 	Response updateImage(@PathParam("id") int id, Image image);
 	
 	@POST
-	@Consumes("")
-	@Produces("")
+	@Consumes({"image/jpg", "image/png"})
+	@Produces("application/json")
 	Response createImage(Image image);
 	
 	@DELETE

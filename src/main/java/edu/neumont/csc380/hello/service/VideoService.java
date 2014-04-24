@@ -12,28 +12,26 @@ import javax.ws.rs.core.Response;
 
 
 @Path("/video")
-@Consumes("application/json")
-@Produces("application/json")
 public interface VideoService {
 
 	@GET
 	@Path("/{id}")
-	@Produces("video/mov")
+	@Produces({"video/quicktime", "video/avi", "video/mp4"})
 	Response getVideo(@PathParam("id") int id);
 	
 	@PUT
 	@Path("/{id}")
-	@Consumes("")
-	@Produces("")
-	Response updateGreeting(@PathParam("id") int id, Video video);
+	@Consumes({"video/quicktime", "video/avi", "video/mp4"})
+	@Produces("application/json")
+	Response updateVideo(@PathParam("id") int id, Video video);
 	
 	@POST
-	@Consumes("")
-	@Produces("")
+	@Consumes({"video/quicktime", "video/avi", "video/mp4"})
+	@Produces("application/json")
 	Response createVideo(Video video);
 	
 	@DELETE
 	@Path("/{id}")
-	Response deleteGreeting(@PathParam("id") int id);
+	Response deleteVideo(@PathParam("id") int id);
 	
 }
