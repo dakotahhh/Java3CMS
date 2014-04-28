@@ -11,19 +11,19 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
 
-@Path("/images")
+@Path("/image")
 public interface ImageService {
 
 	@GET
 	@Path("/{id")
 	@Produces({"image/jpg", "image/png"})
-	Response getImage(@PathParam("id") int id);
+	Response getImage(@PathParam("id") Long id);
 	
 	@PUT
 	@Path("/{id}")
 	@Consumes({"image/jpg", "image/png"})
 	@Produces("application/json")
-	Response updateImage(@PathParam("id") int id, Image image);
+	Response updateImage(@PathParam("id") Long id, Image image);
 	
 	@POST
 	@Consumes({"image/jpg", "image/png"})
@@ -32,7 +32,7 @@ public interface ImageService {
 	
 	@DELETE
 	@Path("/{id}")
-	Response deleteImage(@PathParam("id") int id);
+	Response deleteImage(@PathParam("id") Long id);
 	
 	
 }

@@ -17,13 +17,13 @@ public interface VideoService {
 	@GET
 	@Path("/{id}")
 	@Produces({"video/quicktime", "video/avi", "video/mp4"})
-	Response getVideo(@PathParam("id") int id);
+	Response getVideo(@PathParam("id") Long id);
 	
 	@PUT
 	@Path("/{id}")
 	@Consumes({"video/quicktime", "video/avi", "video/mp4"})
 	@Produces("application/json")
-	Response updateVideo(@PathParam("id") int id, Video video);
+	Response updateVideo(@PathParam("id") Long id, Video video);
 	
 	@POST
 	@Consumes({"video/quicktime", "video/avi", "video/mp4"})
@@ -32,6 +32,6 @@ public interface VideoService {
 	
 	@DELETE
 	@Path("/{id}")
-	Response deleteVideo(@PathParam("id") int id);
+	Response deleteVideo(@PathParam("id") Long id);
 	
 }
